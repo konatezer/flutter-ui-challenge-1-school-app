@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:schoolapp/widgets/course_resume.dart';
 import 'package:schoolapp/widgets/courses_status_title.dart';
 
 class HomePage extends StatefulWidget {
@@ -130,6 +131,24 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ],
+                    ),
+
+                    // courses resume
+
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: 10,
+                        itemBuilder: (BuildContext context, int index) {
+                          return CourseResume(
+                              icon: Icon(
+                                Icons.tiktok,
+                                color: Colors.blue,
+                              ),
+                              courseName: "Mathematique quantique 1",
+                              courseHours: "12:00 pm",
+                              numberJoinded: "12");
+                        },
+                      ),
                     ),
                   ],
                 ),
